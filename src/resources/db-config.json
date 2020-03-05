@@ -1,0 +1,7 @@
+{
+  "user": "root",
+  "password": "mysql",
+  "database": "todo_dev",
+  "host": "localhost",
+  "connectionLimit": 10
+}

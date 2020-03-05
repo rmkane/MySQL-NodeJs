@@ -1,14 +1,11 @@
 const mysql = require('promise-mysql');
+const dbConfig = require('../../resources/db-config.json');
 
-const dbConfig = {
-        user: "joanvasquez",
-        password: "Password2288_",
-        database: "todo_dev",
-        host: "localhost",
-        connectionLimit: 10
-}
-
-module.exports = async () => {
+/**
+ * @returns {Promise<void|PoolConnection>}
+ * @constructor
+ */
+async function DbConnection() {
     try {
         let pool;
         let con;
@@ -22,3 +19,5 @@ module.exports = async () => {
         throw ex;
     }
 }
+
+module.exports = DbConnection;
